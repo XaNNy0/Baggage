@@ -1,3 +1,3 @@
 public interface IBulkyBaggage {
-    int calculateMenNeeded();
+    int calculateWorkforce();
 }

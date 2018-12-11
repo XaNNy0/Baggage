@@ -20,7 +20,7 @@ class BulkyBaggage extends Baggage implements IBulkyBaggage {
     void setTypeOfBulkiness(TypeOfBulkiness typeOfBulkiness) {
         this.typeOfBulkiness = typeOfBulkiness;
     }
-    public int calculateMenNeeded() {
+    public int calculateWorkforce() {
         return (int)Math.ceil(getWeight() / 20);
     }
 

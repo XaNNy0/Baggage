@@ -63,8 +63,8 @@ class BulkyBaggageTest {
         assertEquals(TypeOfBulkiness.unwieldy, bulkyBaggage.getTypeOfBulkiness());
     }
     @Test
-    void calculateMenNeeded() {
-        assertEquals(2,bulkyBaggage.calculateMenNeeded());
-        assertEquals((int)Math.ceil(bulkyBaggage.getWeight()/20), bulkyBaggage.calculateMenNeeded());
+    void calculateWorkforce() {
+        assertEquals(2,bulkyBaggage.calculateWorkforce());
+        assertEquals((int)Math.ceil(bulkyBaggage.getWeight()/20), bulkyBaggage.calculateWorkforce());
     }
 }
