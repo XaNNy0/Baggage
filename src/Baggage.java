@@ -44,6 +44,10 @@ abstract class Baggage implements IBaggage {
         this.securityRating = securityRating;
     }
 
+    private void setStatus(Status status) {
+        this.status = status;
+    }
+
     int getId() {
         return id;
     }
@@ -68,21 +72,17 @@ abstract class Baggage implements IBaggage {
         return owner;
     }
 
+    ArrayList<String> getContent() {
+        return content;
+
+    }
+
     SecurityRating getSecurityRating() {
         return securityRating;
     }
 
     Status getStatus() {
         return status;
-    }
-
-    private void setStatus(Status status) {
-        this.status = status;
-    }
-
-    ArrayList<String> getContent() {
-        return content;
-
     }
 
 
@@ -133,8 +133,9 @@ abstract class Baggage implements IBaggage {
 
     public void transportBaggage() {
         setStatus(Status.deliverToAircraft);
-        System.out.println("Baggage "+ id + "is now inside the Aircraft");
+        System.out.println("Baggage " + id + "is now inside the Aircraft");
     }
+
     public double calculateVolume() {
         return getHeight() * getWidth() * getLength();
     }

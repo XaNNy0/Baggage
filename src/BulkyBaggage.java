@@ -17,11 +17,13 @@ class BulkyBaggage extends Baggage implements IBulkyBaggage {
     TypeOfBulkiness getTypeOfBulkiness() {
         return typeOfBulkiness;
     }
+
     void setTypeOfBulkiness(TypeOfBulkiness typeOfBulkiness) {
         this.typeOfBulkiness = typeOfBulkiness;
     }
+
     public int calculateWorkforce() {
-        return (int)Math.ceil(getWeight() / 20);
+        return (int) Math.ceil(getWeight() / 20);
     }
 
 }
